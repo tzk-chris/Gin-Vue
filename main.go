@@ -7,10 +7,6 @@ import (
 	"github.com/tzk-chris/Gin-Vue/common"
 )
 
-//func Hello(ctx *gin.Context) {
-//	ctx.String(200, "Hello gin")
-//}
-
 type User struct {
 	gorm.Model
 	Name string `gorm:"type:varchar(20);not null"`
@@ -25,9 +21,7 @@ func main() {
 
 	router := gin.Default() // 比gin.New()多了logger和recovery
 	//view := gin.New()
-	//Router(router)
 	router = CollectRoute(router)
-	router.LoadHTMLGlob("template/**/*") // 定位二级目录，三级目录：template/**/**/*
 
 	panic(router.Run(":9090")) // fixed port
 
