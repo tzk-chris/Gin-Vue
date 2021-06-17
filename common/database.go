@@ -11,11 +11,11 @@ var DB *gorm.DB
 
 func InitDB() *gorm.DB {
 	driverName := "mysql"
-	host := "47.98.33.252"
-	port := "3306"
+	host := ""
+	port := ""
 	database := "gingooo"
 	username := "root"
-	password := "Tzkwan1314="
+	password := ""
 	charset := "utf8"
 	args := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=%s&parseTime=true",
 		username,
